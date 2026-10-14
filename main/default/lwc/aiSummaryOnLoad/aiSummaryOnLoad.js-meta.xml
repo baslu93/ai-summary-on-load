@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>AI Summary On Load</masterLabel>
+    <description>Displays an AI-generated record summary using a configurable prompt template. Runs automatically when visible without requiring user interaction.</description>
+    <apiVersion>68.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage">
+            <property name="promptTemplate" type="String" label="Prompt Template" datasource="apex://AiSummaryPromptsFilterByObject"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

@@ -1,0 +1,58 @@
+/* lightning-card overrides via component hooks */
+.ai-answer-card {
+    --slds-c-card-color-background: color-mix(in srgb, var(--slds-g-color-accent-2) 5%, var(--slds-g-color-neutral-base-100));
+    --slds-c-card-color-border: var(--slds-g-color-accent-container-1);
+}
+
+/* Header title slot */
+.ai-card-title {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--slds-g-spacing-2, 4px);
+}
+
+.ai-sparkle-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    color: var(--slds-g-color-accent-3);
+    transition: color 0.4s ease;
+}
+
+.ai-label-text {
+    font-size: var(--slds-g-font-size-3, 13px);
+    font-weight: 700;
+    color: var(--slds-g-color-accent-3);
+}
+
+.ai-label-text span {
+    transition: color 0.4s ease;
+}
+
+/* Loading pulse */
+.pulse {
+    animation: letter-wave 1.2s ease-in-out infinite;
+}
+
+@keyframes letter-wave {
+    0%   { color: var(--slds-g-color-accent-1); }
+    50%  { color: var(--slds-g-color-accent-2); }
+    100% { color: var(--slds-g-color-accent-3); }
+}
+
+/* Answer body */
+.answer-body {
+    padding: 0 var(--slds-g-spacing-5, 16px);
+    animation: ai-reveal 0.4s ease-out;
+}
+
+@keyframes ai-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

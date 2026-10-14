@@ -1,0 +1,12 @@
+{
+    "packageDirectories": [
+        {
+            "path": "main",
+            "default": true
+        }
+    ],
+    "name": "ai-summary-on-load",
+    "namespace": "",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "68.0"
+}

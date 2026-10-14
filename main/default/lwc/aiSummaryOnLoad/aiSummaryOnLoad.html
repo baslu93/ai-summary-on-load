@@ -1,0 +1,24 @@
+<template>
+    <lightning-card class="ai-answer-card">
+
+        <span slot="title" class="ai-card-title">
+            <svg class={iconClass} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" aria-hidden="true">
+                <path fill="currentColor" d="m13.141 10.421-2.405 1.2a3.73 3.73 0 0 0-1.67 1.668l-1.2 2.405a.465.465 0 0 1-.833 0l-1.2-2.405a3.73 3.73 0 0 0-1.67-1.667l-2.405-1.2a.465.465 0 0 1 0-.833l2.405-1.2a3.73 3.73 0 0 0 1.67-1.668l1.2-2.404a.465.465 0 0 1 .833 0l1.2 2.404a3.73 3.73 0 0 0 1.67 1.668l2.405 1.2a.465.465 0 0 1 0 .832m5.247 5.347-1.03-.517a1.6 1.6 0 0 1-.716-.715l-.518-1.03a.2.2 0 0 0-.357 0l-.518 1.03a1.6 1.6 0 0 1-.715.715l-1.031.517a.199.199 0 0 0 0 .358l1.03.517c.312.152.56.407.716.715l.518 1.03a.2.2 0 0 0 .357 0l.518-1.03a1.6 1.6 0 0 1 .715-.715l1.031-.517a.199.199 0 0 0 0-.358m0-11.894-1.03-.517a1.6 1.6 0 0 1-.716-.715l-.518-1.03a.2.2 0 0 0-.357 0l-.518 1.03a1.6 1.6 0 0 1-.715.715l-1.031.517a.2.2 0 0 0 0 .358l1.03.517c.312.152.56.407.716.715l.518 1.03a.2.2 0 0 0 .357 0l.518-1.03a1.6 1.6 0 0 1 .715-.715l1.031-.517a.2.2 0 0 0 0-.358"/>
+            </svg>
+            <span class="ai-label-text">
+                <template for:each={titleChars} for:item="char">
+                    <span key={char.index} class={char.cssClass} style={char.style}>{char.char}</span>
+                </template>
+            </span>
+        </span>
+
+        <template lwc:if={hasAnswer}>
+            <div class="answer-body">
+                <div class="slds-p-bottom_xx-small slds-text-color_default">
+                    <lightning-formatted-rich-text value={richText}></lightning-formatted-rich-text>
+                </div>
+            </div>
+        </template>
+
+    </lightning-card>
+</template>

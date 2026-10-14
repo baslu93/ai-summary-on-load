@@ -1,0 +1,11 @@
+{
+    "orgName": "ai-summary-on-load",
+    "edition": "Developer",
+    "features": ["Einstein1AIPlatform"],
+    "settings": {
+        "einsteinGptSettings": {
+            "enableEinsteinGptPlatform": true
+        }
+    },
+    "language": "en_US"
+}
