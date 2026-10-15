@@ -9,7 +9,7 @@ A Salesforce LWC that automatically generates an AI-powered record summary when 
 
 ![AI Summary On Load](docs/screenshot.png)
 
-Standard Salesforce AI summaries generate context when a user clicks a button. This component changes that interaction by running automatically as soon as it becomes visible.
+Standard Salesforce AI Summary generate context when a user clicks a button. This component changes that interaction by running automatically as soon as it becomes visible.
 
 While the Prompt Template runs in the background, the card takes up very little space, showing only a pulsing "AI Summary" title with a sparkle icon. Once the response is ready, the full summary renders directly inside the card, giving users immediate context the moment they open a record.
 
